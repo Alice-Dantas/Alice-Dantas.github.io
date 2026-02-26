@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AlicePortifolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="navegacao">
+        <ul class="menu-navegacao">
+            <li>
+                <a href="#inicio" class="menu-link">Início</a>
+            </li>
+
+            <li>
+                <a href="#quem-sou-eu" class="menu-link">Sobre</a>
+            </li>
+            <li>
+                <a href="#projetos" class="menu-link">Projetos</a>
+            </li>
+            <li>
+                <a href="#contato" class="menu-link">Contato</a>
+            </li>
+        </ul>
+    </nav>
+
+    <main id="inicio" class="cabecalho">
+        <img src="img\eu.jpg" alt="Foto de Alice Dantas" class="foto">
+        <h1>Alice Dantas</h1>
+        <p>Desenvolvedora Front End</p>
+        <div class="scroll-indicator">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+        </div>
+    </main>
+
+    <section id="quem-sou-eu" class="quem-sou-eu">
+        <h2 class="quem-sou-eu-titulo">Sobre</h2>
+        <div class="quem-sou-eu-container">
+            <div class="quem-sou-eu-caixa">
+                <div class="sobre-conteudo">
+                    <p class="quem-sou-eu-paragrafo">
+                        <strong>Desenvolvedora Front End</strong> e estudante de Sistemas da Informação, 
+                        apaixonada por criar experiências web envolventes e funcionais. Com foco em 
+                        desenvolvimento web moderno e aprendizado contínuo.
+                    </p>
+                    <div class="skills-container">
+                        <h3 class="skills-titulo">Soluções que ofereço</h3>
+                        <div class="skills-grid">
+                            <div class="skill-item">
+                                <span class="skill-nome">Design de Sites</span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-nome">Interatividade Web</span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-nome">Programação e Automação</span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-nome">Planejamento de Projetos</span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-nome">Organização de Dados</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projetos" class="projetos">
+        <h2 class="projetos-titulo">Projetos</h2>
+        <div class="projetos-galeria">
+            <div class="projeto-card">
+                <img src="img/133926789129160188.jpg" alt="Projeto 1" class="projeto-img">
+            </div>
+            <div class="projeto-card">
+                <img src="img/133946806974824991.jpg" alt="Projeto 2" class="projeto-img">
+            </div>
+            <div class="projeto-card">
+                <img src="img/133989008570458053.jpg" alt="Projeto 3" class="projeto-img">
+            </div>
+        </div>
+    </section>
+
+    <section id="contato" class="contato">
+        <h2 class="contato-titulo">Contato</h2>
+        <form id="formulario" class="formulario-contato">
+            <div class="grupo-form">
+                <label for="nome" class="form-label">Nome</label>
+                <input type="text" id="nome" placeholder="Digite seu nome completo" class="nome-form" required>
+            </div>
+            <div class="grupo-form">
+                <label for="mensagem" class="form-label">Mensagem</label>
+                <textarea id="mensagem" placeholder="Digite sua mensagem aqui..." class="msg-form" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="btn-enviar">Enviar mensagem para o WhatsApp</button>
+        </form>
+    </section>
+
+    <script>
+        const formulario = document.getElementById('formulario');
+        formulario.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const nome = document.getElementById('nome').value;
+            const mensagem = document.getElementById('mensagem').value;
+            
+            // Coloque seu número de WhatsApp aqui (com código do país, sem +)
+            const numeroWhatsApp = '5571997368802'; // Exemplo: 55 (Brasil) + DDD + número
+            
+            const textoMensagem = `*Nome*:%0A${nome}%0A%0A*Mensagem*:%0A${mensagem}`;
+            const urlWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${textoMensagem}`;
+            
+            window.open(urlWhatsApp, '_blank');
+        });
+
+        const scrollIndicator = document.querySelector('.scroll-indicator');
+        if (scrollIndicator) {
+            const sections = ['quem-sou-eu', 'projetos', 'contato'];
+            let currentSectionIndex = -1;
+
+            scrollIndicator.addEventListener('click', function() {
+                currentSectionIndex = (currentSectionIndex + 1) % sections.length;
+                const targetSection = document.getElementById(sections[currentSectionIndex]);
+                if (targetSection) {
+                    targetSection.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+            scrollIndicator.style.cursor = 'pointer';
+        }
+
+    </script>
+
+</body>
+
+</html>

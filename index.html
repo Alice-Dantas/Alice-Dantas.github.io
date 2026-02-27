@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AlicePortifolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="navegacao">
+        <ul class="menu-navegacao">
+            <li>
+                <a href="#inicio" class="menu-link">Início</a>
+            </li>
+            <li>
+                <a href="#solucoes" class="menu-link">Soluções que ofereço</a>
+            </li>
+            <li>
+                <a href="#projetos" class="menu-link">Projetos</a>
+            </li>
+            <li>
+                <a href="#contato" class="menu-link">Contato</a>
+            </li>
+        </ul>
+    </nav>
+
+    <main id="inicio" class="cabecalho">
+        <div class="cabecalho-container">
+            <div class="foto-wrapper">
+                <img src="img\eu.jpg" alt="Foto de Alice Dantas" class="foto">
+            </div>
+            <div class="cabecalho-conteudo">
+                <h1>Alice Dantas</h1>
+                <p>Desenvolvedora Front End</p>
+                <p class="cabecalho-descricao">Você não precisa saber nada de tecnologia. <br>Você traz a ideia.
+Eu cuido do código para que você possa focar no que ama. Vamos transformar sua visão em uma experiência digital autêntica?</p>
+                <a href="#contato" class="cabecalho-cta">Quero tirar minha ideia do papel</a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+        </div>
+    </main>
+
+    <section id="solucoes" class="solucoes">
+        <h2 class="solucoes-titulo">Soluções que ofereço</h2>
+        <div class="solucoes-container">
+            <div class="solucoes-caixa">
+                <div class="sobre-conteudo">
+                    <div class="skills-container">
+                        <div class="skills-grid">
+                            <div class="skill-item" data-projeto="Portfólio profissional">
+                                <span class="skill-nome">Crio seu portfólio profissional</span>
+                            </div>
+                            <div class="skill-item" data-projeto="Blog personalizado">
+                                <span class="skill-nome">Crio seu blog personalizado</span>
+                            </div>
+                            <div class="skill-item" data-projeto="Site de vendas online">
+                                <span class="skill-nome">Crio seu site de vendas online</span>
+                            </div>
+                            <div class="skill-item" data-projeto="Sistema de gestão de tarefas">
+                                <span class="skill-nome">Crio seu site de gestão de tarefas</span>
+                            </div>
+                            <div class="skill-item" data-projeto="Página promocional/landing page">
+                                <span class="skill-nome">Crio páginas promocionais</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="#contato" class="solucoes-cta">Sua ideia não está aqui? Vamos criar!</a>
+    </section>
+
+    <section id="projetos" class="projetos">
+        <h2 class="projetos-titulo">Projetos</h2>
+        <div class="projetos-galeria">
+            <div class="projeto-card">
+                <img src="img/133926789129160188.jpg" alt="Projeto 1" class="projeto-img">
+            </div>
+            <div class="projeto-card">
+                <img src="img/133946806974824991.jpg" alt="Projeto 2" class="projeto-img">
+            </div>
+            <div class="projeto-card">
+                <img src="img/133989008570458053.jpg" alt="Projeto 3" class="projeto-img">
+            </div>
+        </div>
+    </section>
+
+    <section id="contato" class="contato">
+        <h2 class="contato-titulo">Contato</h2>
+        <form id="formulario" class="formulario-contato">
+            <!-- Etapa 1: Campos Iniciais -->
+            <div id="etapa1" class="form-etapa form-etapa-ativa">
+                <div class="grupo-form">
+                    <label for="nome" class="form-label">Nome</label>
+                    <input type="text" id="nome" placeholder="Digite seu nome e sobrenome" class="nome-form" required>
+                </div>
+                <div class="grupo-form">
+                    <label for="tipo-projeto" class="form-label">Tipo de Projeto</label>
+                    <select id="tipo-projeto" class="nome-form" required>
+                        <option value="">Selecione uma opção</option>
+                        <option value="Portfólio profissional">Portfólio profissional</option>
+                        <option value="Blog personalizado">Blog personalizado</option>
+                        <option value="Site de vendas online">Site de vendas online</option>
+                        <option value="Sistema de gestão de tarefas">Sistema de gestão de tarefas</option>
+                        <option value="Página promocional/landing page">Página promocional/landing page</option>
+                        <option value="Outro projeto">Outro projeto</option>
+                    </select>
+                </div>
+                <div class="grupo-form">
+                    <label for="prazo" class="form-label">Prazo Desejado</label>
+                    <select id="prazo" class="nome-form" required>
+                        <option value="">Selecione uma opção</option>
+                        <option value="Urgente (até 1 semana)">Urgente (até 1 semana)</option>
+                        <option value="Normal (2-4 semanas)">Normal (2-4 semanas)</option>
+                        <option value="Flexível (sem pressa)">Flexível (sem pressa)</option>
+                    </select>
+                </div>
+                <div class="grupo-form">
+                    <label for="orcamento" class="form-label">Orçamento Aproximado <span style="opacity: 0.6;">(opcional)</span></label>
+                    <select id="orcamento" class="nome-form">
+                        <option value="">Selecione uma opção</option>
+                        <option value="Até R$ 500">Até R$ 500</option>
+                        <option value="R$ 500 - R$ 1.500">R$ 500 - R$ 1.500</option>
+                        <option value="R$ 1.500 - R$ 3.000">R$ 1.500 - R$ 3.000</option>
+                        <option value="Acima de R$ 3.000">Acima de R$ 3.000</option>
+                        <option value="A definir">A definir</option>
+                    </select>
+                </div>
+                <div id="aviso-validacao" class="aviso-validacao"></div>
+                <button type="button" id="btn-proximo" class="btn-proximo">Entrar em contato</button>
+            </div>
+
+            <!-- Etapa 2: Detalhes do Projeto -->
+            <div id="etapa2" class="form-etapa">
+                <div class="grupo-form">
+                    <label for="mensagem" class="form-label">Detalhes do Projeto</label>
+                    <textarea id="mensagem" placeholder="Conte mais sobre sua ideia e o que você precisa..." class="msg-form" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="btn-enviar">Enviar mensagem para o WhatsApp</button>
+                <a href="#" id="link-voltar" class="link-voltar">← Voltar</a>
+            </div>
+        </form>
+    </section>
+
+    <script>
+        const formulario = document.getElementById('formulario');
+        const etapa1 = document.getElementById('etapa1');
+        const etapa2 = document.getElementById('etapa2');
+        const linkVoltar = document.getElementById('link-voltar');
+        const btnProximo = document.getElementById('btn-proximo');
+        const avisoValidacao = document.getElementById('aviso-validacao');
+        
+        const campos = {
+            nome: document.getElementById('nome'),
+            tipoProjeto: document.getElementById('tipo-projeto'),
+            prazo: document.getElementById('prazo'),
+            orcamento: document.getElementById('orcamento'),
+            mensagem: document.getElementById('mensagem')
+        };
+
+        // Função para verificar se os campos obrigatórios da etapa 1 estão preenchidos
+        function verificarEtapa1() {
+            const nome = campos.nome.value.trim();
+            const tipoProjeto = campos.tipoProjeto.value.trim();
+            const prazo = campos.prazo.value.trim();
+            
+            return nome !== '' && tipoProjeto !== '' && prazo !== '';
+        }
+
+        // Função para mostrar a etapa 2
+        function mostrarEtapa2() {
+            if (verificarEtapa1()) {
+                avisoValidacao.style.display = 'none';
+                avisoValidacao.textContent = '';
+                etapa1.classList.remove('form-etapa-ativa');
+                etapa2.classList.add('form-etapa-ativa');
+            } else {
+                mostrarAviso();
+            }
+        }
+
+        // Função para mostrar aviso de validação
+        function mostrarAviso() {
+            avisoValidacao.textContent = '⚠️ Preencha os campos obrigatórios (Nome, Tipo de Projeto e Prazo)';
+            avisoValidacao.style.display = 'block';
+        }
+
+        // Função para voltar à etapa 1
+        function voltarEtapa1() {
+            avisoValidacao.style.display = 'none';
+            avisoValidacao.textContent = '';
+            etapa2.classList.remove('form-etapa-ativa');
+            etapa1.classList.add('form-etapa-ativa');
+        }
+
+        // Event listener para o botão próximo
+        btnProximo.addEventListener('click', mostrarEtapa2);
+
+        // Event listener para o link voltar
+        linkVoltar.addEventListener('click', function(e) {
+            e.preventDefault();
+            voltarEtapa1();
+        });
+
+        // Submissão do formulário
+        formulario.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const nome = campos.nome.value;
+            const tipoProjeto = campos.tipoProjeto.value;
+            const prazo = campos.prazo.value;
+            const orcamento = campos.orcamento.value;
+            const mensagem = campos.mensagem.value;
+            
+            // Coloque seu número de WhatsApp aqui (com código do país, sem +)
+            const numeroWhatsApp = '5571997368802'; // Exemplo: 55 (Brasil) + DDD + número
+            
+            let textoMensagem = `Olá! Vim pelo seu portfólio 🌟%0A%0A`;
+            textoMensagem += `*Nome:* ${nome}%0A`;
+            textoMensagem += `*Tipo de projeto:* ${tipoProjeto}%0A`;
+            textoMensagem += `*Prazo:* ${prazo}%0A`;
+            if (orcamento) {
+                textoMensagem += `*Orçamento:* ${orcamento}%0A`;
+            }
+            textoMensagem += `%0A*Detalhes do projeto:*%0A${mensagem}`;
+            
+            const urlWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${textoMensagem}`;
+            
+            window.open(urlWhatsApp, '_blank');
+        });
+
+        const scrollIndicator = document.querySelector('.scroll-indicator');
+        if (scrollIndicator) {
+            const sections = ['solucoes', 'projetos', 'contato'];
+            let currentSectionIndex = -1;
+
+            // Função para verificar a posição do scroll e atualizar a seta
+            function updateScrollIndicator() {
+                const contatoSection = document.getElementById('contato');
+                if (contatoSection) {
+                    const contatoTop = contatoSection.offsetTop;
+                    const scrollPosition = window.scrollY + window.innerHeight / 2;
+                    
+                    if (scrollPosition >= contatoTop) {
+                        scrollIndicator.classList.add('to-top');
+                    } else {
+                        scrollIndicator.classList.remove('to-top');
+                    }
+                }
+            }
+
+            // Atualiza ao rolar a página
+            window.addEventListener('scroll', updateScrollIndicator);
+            
+            // Atualiza inicialmente
+            updateScrollIndicator();
+
+            scrollIndicator.addEventListener('click', function() {
+                const isOnContactSection = scrollIndicator.classList.contains('to-top');
+                
+                if (isOnContactSection) {
+                    // Se está na seção de contato, voltar ao topo
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                    currentSectionIndex = -1;
+                } else {
+                    currentSectionIndex = (currentSectionIndex + 1) % sections.length;
+                    const targetSection = document.getElementById(sections[currentSectionIndex]);
+                    if (targetSection) {
+                        targetSection.scrollIntoView({ behavior: 'smooth' });
+                    }
+                }
+            });
+            scrollIndicator.style.cursor = 'pointer';
+        }
+
+        // Intersection Observer para animar a borda da caixa de soluções quando visível
+        const solucoesSection = document.getElementById('solucoes');
+        if (solucoesSection) {
+            const solucoesObserver = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        const solucoesBox = solucoesSection.querySelector('.solucoes-caixa');
+                        if (solucoesBox && !solucoesBox.classList.contains('ativa')) {
+                            solucoesBox.classList.add('ativa');
+                        }
+                    }
+                });
+            }, { threshold: 0.3 });
+            
+            solucoesObserver.observe(solucoesSection);
+        }
+
+        // Adicionar cliques aos itens de soluções para navegar ao contato
+        const skillItems = document.querySelectorAll('.skill-item[data-projeto]');
+        skillItems.forEach(function(item) {
+            item.style.cursor = 'pointer';
+            item.addEventListener('click', function() {
+                const tipoProjeto = this.getAttribute('data-projeto');
+                
+                // Navegar para a seção de contato
+                const contatoSection = document.getElementById('contato');
+                if (contatoSection) {
+                    contatoSection.scrollIntoView({ behavior: 'smooth' });
+                }
+                
+                // Aguardar um pouco para o scroll completar e então selecionar o tipo de projeto
+                setTimeout(function() {
+                    const selectTipoProjeto = document.getElementById('tipo-projeto');
+                    if (selectTipoProjeto) {
+                        selectTipoProjeto.value = tipoProjeto;
+                        // Adicionar um efeito visual de destaque
+                        selectTipoProjeto.style.transition = 'transform 0.3s ease';
+                        selectTipoProjeto.style.transform = 'scale(1.05)';
+                        setTimeout(function() {
+                            selectTipoProjeto.style.transform = 'scale(1)';
+                        }, 300);
+                    }
+                }, 500);
+            });
+        });
+
+    </script>
+
+</body>
+
+</html>
